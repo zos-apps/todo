@@ -1,5 +1,5 @@
 {
-  "name": "@anthropic/todo",
+  "name": "@zos-apps/todo",
   "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -11,9 +11,14 @@
     "icon": "✅",
     "category": "productivity",
     "description": "Task list and reminders",
-    "permissions": ["storage.local"],
+    "permissions": [
+      "storage.local"
+    ],
     "window": {
-      "defaultSize": { "width": 380, "height": 500 },
+      "defaultSize": {
+        "width": 380,
+        "height": 500
+      },
       "resizable": true
     }
   },
@@ -30,5 +35,23 @@
     "@types/react-dom": "^18.3.0",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
-  }
+  },
+  "description": "Task list and reminders",
+  "homepage": "https://zos-apps.github.io/todo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zos-apps/todo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zos-apps/todo/issues"
+  },
+  "author": "Hanzo AI",
+  "license": "MIT",
+  "keywords": [
+    "zos",
+    "app",
+    "todo",
+    "macos",
+    "desktop"
+  ]
 }
