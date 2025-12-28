@@ -40,7 +40,26 @@
       "Priority",
       "Categories",
       "Sync"
-    ]
+    ],
+    "screenshots": {
+      "hero": "screenshots/hero.png",
+      "images": [
+        "screenshots/1-main.png",
+        "screenshots/2-feature.png"
+      ]
+    },
+    "downloads": {
+      "web": "https://zos-apps.github.io/todo"
+    },
+    "featured": false,
+    "tags": [
+      "productivity",
+      "work",
+      "todo"
+    ],
+    "releaseDate": "2024-12-28",
+    "support": "https://github.com/zos-apps/todo/issues",
+    "changelog": "https://github.com/zos-apps/todo/releases"
   },
   "scripts": {
     "build": "tsup",
