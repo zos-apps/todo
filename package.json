@@ -20,7 +20,27 @@
         "height": 500
       },
       "resizable": true
-    }
+    },
+    "about": "Simple and elegant task management application.",
+    "help": [
+      "Add tasks with +",
+      "Check to complete",
+      "Swipe to delete"
+    ],
+    "docs": "https://zos-apps.github.io/todo",
+    "site": "https://github.com/zos-apps/todo",
+    "shortcuts": [
+      "Cmd+N New task",
+      "Enter Save",
+      "Delete Remove"
+    ],
+    "features": [
+      "Task lists",
+      "Due dates",
+      "Priority",
+      "Categories",
+      "Sync"
+    ]
   },
   "scripts": {
     "build": "tsup",
@@ -53,5 +73,13 @@
     "todo",
     "macos",
     "desktop"
-  ]
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/zos-apps"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
