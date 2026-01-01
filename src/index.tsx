@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
+import type { AppProps } from '@zos-apps/config';
+import { useLocalStorage } from '@zos-apps/config';
 
 interface Todo {
   id: string;
@@ -7,27 +9,12 @@ interface Todo {
   createdAt: number;
 }
 
-interface TodoProps {
-  onClose: () => void;
-}
+type Filter = 'all' | 'active' | 'completed';
 
-const STORAGE_KEY = 'zos-todos';
-
-const TodoApp: React.FC<TodoProps> = ({ onClose }) => {
-  const [todos, setTodos] = useState<Todo[]>([]);
+const TodoApp: React.FC<AppProps> = ({ onClose: _onClose }) => {
+  const [todos, setTodos] = useLocalStorage<Todo[]>('zos-todos', []);
   const [newTodo, setNewTodo] = useState('');
-  const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all');
-
-  useEffect(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) {
-      setTodos(JSON.parse(saved));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
-  }, [todos]);
+  const [filter, setFilter] = useState<Filter>('all');
 
   const addTodo = useCallback(() => {
     if (!newTodo.trim()) return;
